@@ -6,3 +6,6 @@ endpoints:
     type: REST
     networkVisibility: Public
     context: /
+    cors:
+      # Enable CORS (Cross-Origin Resource Sharing)
+      enabled: true
