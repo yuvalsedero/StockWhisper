@@ -24,22 +24,22 @@ This project is a web application built with Django (backend) and React (fronten
 2. **Create a virtual environment (recommended):**
    Refer to official Django or React documentation for specific instructions.
 3. **Install dependencies:**
-   bash
+   on bash:
   pip install -r requirements.txt  # For backend dependencies
   cd frontend && npm install        # For frontend dependencies
 4. **Run database migrations (Django):**
-   bash
+   on bash:
    python manage.py migrate
 5. **Set up environment variables:**
   -Create a .env file in the project root directory (ignore this file with Git) to store sensitive settings like API keys.
   -Configure Django and any other libraries to read from these variables.
 6. **Run the development server:**
    Start the Django server:
-   bash
+   on bash:
    python manage.py runserver
    
    Start the React development server (in a separate terminal):
-   Bash
+   on bash:
    cd frontend && npm start
 
 **credits to yfinance library**
