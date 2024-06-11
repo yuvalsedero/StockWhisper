@@ -1,0 +1,27 @@
+.navbar {
+    /* display: flex; */
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #152331; /* Dark blue color */
+    color: white; /* White text */
+    height: 60px; /* Adjust height as needed */
+  }
+  
+  .navbar-container {
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Distribute content with space at ends */
+    align-items: center; /* Align items vertically in the center */
+  }
+  
+  
+  
+  .navbar-logo {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    font-weight: bold;
+  }
+  .navbar-attribution {
+  font-size: 0.8rem; /* Adjust font size as needed */
+  color: #ccc; /* Adjust color as needed */
+  text-align: right;
+}

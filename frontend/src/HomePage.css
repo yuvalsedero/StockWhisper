@@ -1,0 +1,25 @@
+.home-page {
+  /* Styles for the main container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.home-page form {
+  display: flex; /* Make the form a flex container */
+  flex-direction: column; /* Arrange elements vertically (optional) */
+  align-items: center; /* Center elements horizontally within the form */
+}
+.home-page form label {
+  line-height: 1.5; /* Adjust spacing as needed */
+}
+.home-page input {
+  color: black; 
+}
+
+.home-page button {
+  padding: 4%;
+  background-color: #6e95bb;
+  color: whitesmoke;
+  font-family: 'Verdana', sans-serif; /* Include a fallback font */
+}

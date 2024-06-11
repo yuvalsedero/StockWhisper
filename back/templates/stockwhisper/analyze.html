@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Analysis</title>
+</head>
+<body>
+  <h1>Stock Analysis</h1>
+  <form method="POST">
+    <label for="ticker">Stock Ticker Symbol:</label>
+    <input type="text" id="ticker" name="ticker" required>
+    <br>
+    <label for="period">Period:</label>
+    <select id="period" name="period">
+      <option value="1d">1 Day</option>
+      <option value="5d">5 Days</option>
+      <option value="1mo">1 Month</option>
+      <option value="3mo">3 Months</option>
+      <option value="6mo">6 Months</option>
+      <option value="1y">1 Year</option>
+      <option value="ytd">Year to Date</option>
+    </select>
+    <br>
+    <button type="submit">Analyze</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+/* ResultsPage.css */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+  }
+  
+  h1, p, h2 {
+    text-align: center;
+  }
+  
+  .positive {
+    color: green;
+  }
+  
+  .negative {
+    color: red;
+  }
+  
+  .table-container {
+    display: flex;
+    flex-direction: column; /* Stack vertically by default */
+    width: 100%; /* Take up full width of container */
+    overflow: auto; /* Enable scrolling if content overflows */
+    text-align: center;
+  }
+  .table-header {
+    font-size: 22px;  /* Adjust font size as desired */
+  }
+  .table-cells {
+    font-size: 13px;  /* Adjust font size as desired */
+  }

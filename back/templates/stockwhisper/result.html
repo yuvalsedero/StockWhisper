@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Analysis - {{ ticker }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;  /* Set a default font */
+      margin: 0;  /* Remove default browser margins */
+    }
+
+    .container {
+      width: 80%;  /* Set a maximum width for the content area */
+      margin: 0 auto;  /* Center the content horizontally */
+      padding: 20px;  /* Add some padding for better readability */
+    }
+
+    h1, p, h2 {
+      text-align: center;  /* Center the text for title and paragraph */
+    }
+
+    /* Conditional color for percentage change */
+    .positive {
+      color: green;
+    }
+
+    .negative {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Stock Analysis - {{ ticker }}</h1>
+    {% if data %}
+      <p>
+        Percentage Change:
+        <span class="{% if data.change > 0 %}positive{% else %}negative{% endif %}">
+          {% if data.change > 0 %} +{{ data.change }}% {% else %} {{ data.change }}% {% endif %}
+        </span>
+        ({{ data.close|floatformat:"0.2f" }}$)
+      </p>
+      <h2>Historical Data (Last 5 Days)</h2>
+      {% if data.History %} <h2>Historical Data (Full)</h2> {% endif %}
+    {% else %}
+      <p>No data available for this ticker or period.</p>
+    {% endif %}
+  </div>
+</body>
+</html>
