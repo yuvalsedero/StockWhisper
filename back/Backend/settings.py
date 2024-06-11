@@ -20,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#ltv$b)f$#dz19=cv5j+(a(mdvgkr*-g6!%tux@)c^qpjn)wt4'
+SECRET_KEY = 'vPMDgCtPXeb32ffuDIRE1Cm7n8k_F_l7EC4dXfWYQcg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'stockwhisper',
     'corsheaders',
     'rest_framework',
-    "debug_toolbar",
+    # "debug_toolbar",
     
 ]
 
@@ -124,8 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -137,9 +137,4 @@ CORS_ORIGIN_WHITELIST = [
      'http://127.0.0.1:8000',
      'http://127.0.0.1:8080'
      
-]
-INTERNAL_IPS = [
-    # ...
-    "127.0.0.1",
-    # ...
 ]
