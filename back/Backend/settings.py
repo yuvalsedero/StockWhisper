@@ -40,14 +40,14 @@ INSTALLED_APPS = [
     'stockwhisper',
     'corsheaders',
     'rest_framework',
-    "debug_toolbar",
+    # "debug_toolbar",
     
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    # "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
@@ -133,8 +133,5 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-     'http://localhost:3000',
-     'http://127.0.0.1:8000',
-     'http://127.0.0.1:8080',
-     'https://stockwhisper.onrender.com/',
+     'https://stockwhisper.onrender.com/'
 ]
