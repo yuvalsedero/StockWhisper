@@ -25,7 +25,7 @@ SECRET_KEY = 'vPMDgCtPXeb32ffuDIRE1Cm7n8k_F_l7EC4dXfWYQcg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [stockwhisper-api.onrender.com]
+ALLOWED_HOSTS = ['stockwhisper-api.onrender.com']
 
 
 # Application definition
