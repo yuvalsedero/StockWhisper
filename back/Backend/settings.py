@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'vPMDgCtPXeb32ffuDIRE1Cm7n8k_F_l7EC4dXfWYQcg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [stockwhisper-api.onrender.com]
 
 
 # Application definition
@@ -135,6 +135,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
      'http://127.0.0.1:8000',
-     'http://127.0.0.1:8080'
-     
+     'http://127.0.0.1:8080',
+     'https://stockwhisper.onrender.com/',
 ]
