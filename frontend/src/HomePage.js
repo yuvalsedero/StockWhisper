@@ -31,13 +31,16 @@ function HomePage() {
 		setErrorMessage(''); // Clear any previous error message
 		setIsLoading(true);
 		try {
-			const response = await fetch('http://127.0.0.1:8000/analyze/', {
-				method: 'POST',
-				body: JSON.stringify({ ticker: tickerSymbol, period, SharesNumber }),
-				headers: {
-					'Content-Type': 'application/json',
-				},
-			});
+			const response = await fetch(
+				'https://stockwhisper-api.onrender.com/analyze',
+				{
+					method: 'POST',
+					body: JSON.stringify({ ticker: tickerSymbol, period, SharesNumber }),
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				}
+			);
 
 			if (!response.ok) {
 				throw new Error(`API call failed with status ${response.status}`);
