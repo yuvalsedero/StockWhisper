@@ -1,4 +1,8 @@
 # Stock Analysis App with Django and React
+
+https://stockwhisper.onrender.com/
+Currently deployed on Render site. Takes the server a minute to load the first request.
+
 Description:
 
 This project is a web application built with Django (backend) and React (frontend) that allows users to analyze stock performance over a chosen time period. It combines the strengths of both frameworks to provide an interactive and informative stock analysis experience.
