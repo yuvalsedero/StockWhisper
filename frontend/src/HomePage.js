@@ -32,8 +32,7 @@ function HomePage() {
 		setIsLoading(true);
 		try {
 			const response = await fetch(
-				// 'https://stockwhisper-api.onrender.com/analyze/',
-				'http://127.0.0.1:8000/analyze/',
+				'https://stockwhisper-api.onrender.com/analyze/',
 				{
 					method: 'POST',
 					body: JSON.stringify({ ticker: tickerSymbol, period, SharesNumber }),
