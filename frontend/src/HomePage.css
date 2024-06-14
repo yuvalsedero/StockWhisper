@@ -1,25 +1,92 @@
 .home-page {
-  /* Styles for the main container */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
+	display: flex; /* Make the container a flex container */
+
+	/* align-items: center; Align child elements vertically (already present) */
+	width: 100vw; /* Set full viewport width */
+	color: #2c3639; /* Assuming a dark background for now */
+	background-color: #dcd7c9; /* Add a background color for contrast */
+	/* Add some padding for spacing */
+}
+
+.left-section-home-page {
+	flex: 40%; /* One-third width for the left section */
+	position: relative;
+	margin: 0;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	/* object-fit: cover; */
+	/* min-height: 100dvh; */
+	/* Additional styling for content within the left section */
+}
+
+.right-section-home-page {
+	z-index: 1;
+	flex: 2 0 60%; /* Two-thirds width for the right section */
+	min-height: 100dvh;
+	background-color: #2c3639;
+	display: flex; /* Make the section a flex container */
+	align-items: center; /* Align child elements vertically (center) */
+
+	/* Additional styling for content within the right section */
+}
+/* **`max-width` and `max-height` properties:** */
+
+.right-section-home-page img {
+	z-index: 1;
+	margin-left: -10px;
+	width: 90%; /* Set a maximum width */
+	height: auto; /* Set a maximum height */
+	/* object-fit: cover; Resize image to cover the container */
+	box-shadow: -10px 10px 10px 0px #1b262c;
+}
+
+.home-page h1 {
+	font-size: 2em; /* Increase heading size */
+	margin-bottom: 1em; /* Add some space a fter the heading */
+	margin-top: 3.5em;
 }
 .home-page form {
-  display: flex; /* Make the form a flex container */
-  flex-direction: column; /* Arrange elements vertically (optional) */
-  align-items: center; /* Center elements horizontally within the form */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.3em; /* Add space between form elements */
 }
+
 .home-page form label {
-  line-height: 1.5; /* Adjust spacing as needed */
+	line-height: 1.5;
+	font-weight: bold; /* Make labels bold for distinction */
 }
-.home-page input {
-  color: black; 
+
+.home-page input,
+.home-page select {
+	color: black;
+	padding: 0.5em;
+	border: 1px solid #2c3639; /* Add a border for inputs */
+	border-radius: 4px; /* Add rounded corners */
+}
+
+.home-page .error-input {
+	border-color: red; /* Red border for error indication */
 }
 
 .home-page button {
-  padding: 4%;
-  background-color: #6e95bb;
-  color: whitesmoke;
-  font-family: 'Verdana', sans-serif; /* Include a fallback font */
+	padding: 1em 2em;
+	background-color: #a27b5c;
+	color: whitesmoke;
+	font-family: 'Verdana', sans-serif;
+	border: none; /* Remove default button border */
+	border-radius: 4px;
+	cursor: pointer; /* Indicate clickable element */
+	transition: background-color 0.2s ease-in-out; /* Add hover effect */
+}
+
+.home-page button:hover {
+	background-color: #4e7c9e; /* Change background color on hover */
+}
+
+.home-page .error-message {
+	color: red;
+	font-size: 0.8em; /* Reduce error message size slightly */
+	margin-top: 0.5em; /* Add space above the error message */
 }

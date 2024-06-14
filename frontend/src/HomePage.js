@@ -32,7 +32,8 @@ function HomePage() {
 		setIsLoading(true);
 		try {
 			const response = await fetch(
-				'https://stockwhisper-api.onrender.com/analyze/',
+				// 'https://stockwhisper-api.onrender.com/analyze/',
+				'http://127.0.0.1:8000/analyze/',
 				{
 					method: 'POST',
 					body: JSON.stringify({ ticker: tickerSymbol, period, SharesNumber }),
@@ -71,56 +72,63 @@ function HomePage() {
 	}, [analysisData, navigate]);
 
 	return (
-		<div className="home-page">
-			<h1>Stock Analysis</h1>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="ticker">Stock Ticker Symbol:</label>
-				<input
-					type="text"
-					id="ticker"
-					name="tickerSymbol"
-					value={tickerSymbol}
-					onChange={handleInputChange}
-					required
-					className={errorMessage ? 'error-input' : ''} // Add error class if needed
-				/>
-				<label htmlFor="shares">Shares amount:</label>
-				<input
-					type="number"
-					id="shares"
-					name="SharesNumber"
-					value={SharesNumber}
-					onChange={handleInputChange}
-					required
-					className={errorMessage ? 'error-input' : ''} // Add error class if needed
-				/>
-				<br />
-				<label htmlFor="period">Period:</label>
-				<select
-					id="period"
-					name="period"
-					value={period}
-					onChange={handleInputChange}
-				>
-					<option value="1d">1 Day</option>
-					<option value="5d">5 Days</option>
-					<option value="1mo">1 Month</option>
-					<option value="3mo">3 Months</option>
-					<option value="6mo">6 Months</option>
-					<option value="1y">1 Year</option>
-					<option value="ytd">Year to Date</option>
-				</select>
-				<br />
-				<button type="submit" disabled={isLoading}>
-					{isLoading ? 'Analyzing...' : 'Analyze'}
-				</button>
-			</form>
-			{errorMessage && ( // Conditionally render error message in red, positioned below button
-				<span className="error-message" style={{ color: 'red' }}>
-					{errorMessage}
-				</span>
-			)}
-		</div>
+		<body>
+			<div className="home-page">
+				<div className="left-section-home-page ">
+					<h1 className="form">Stock Analysis</h1>
+					<form onSubmit={handleSubmit}>
+						<label htmlFor="ticker">Stock Ticker Symbol:</label>
+						<input
+							type="text"
+							id="ticker"
+							name="tickerSymbol"
+							value={tickerSymbol}
+							onChange={handleInputChange}
+							required
+							className={errorMessage ? 'error-input' : ''} // Add error class if needed
+						/>
+						<label htmlFor="shares">Shares amount:</label>
+						<input
+							type="number"
+							id="shares"
+							name="SharesNumber"
+							value={SharesNumber}
+							onChange={handleInputChange}
+							required
+							className={errorMessage ? 'error-input' : ''} // Add error class if needed
+						/>
+						<br />
+						<label htmlFor="period">Period:</label>
+						<select
+							id="period"
+							name="period"
+							value={period}
+							onChange={handleInputChange}
+						>
+							<option value="1d">1 Day</option>
+							<option value="5d">5 Days</option>
+							<option value="1mo">1 Month</option>
+							<option value="3mo">3 Months</option>
+							<option value="6mo">6 Months</option>
+							<option value="1y">1 Year</option>
+							<option value="ytd">Year to Date</option>
+						</select>
+						<br />
+						<button type="submit" disabled={isLoading}>
+							{isLoading ? 'Analyzing...' : 'Analyze'}
+						</button>
+					</form>
+					{errorMessage && ( // Conditionally render error message in red, positioned below button
+						<span className="error-message" style={{ color: 'red' }}>
+							{errorMessage}
+						</span>
+					)}
+				</div>
+				<div className="right-section-home-page ">
+					<img src=".\stocksPicture.jpg" alt="Image description"></img>
+				</div>
+			</div>
+		</body>
 	);
 }
 
